@@ -1,0 +1,24 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+<div class="exemple-wrapper">
+    <h1>Les livres</h1>
+        <div class="col-8">
+            <table class="table table-bordered">
+                <tr>
+                    <th>Auteur</th>
+                    <th>Titre</th>
+                    <th>Resumé</th>
+                </tr>
+                {% for livre in liste_livres %}
+                    <tr>
+                        <td>{{ livre.auteur }}</td>
+                        <td>{{ livre.titre }}</td>
+                        <td>{{ livre.resume }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+
+{% endblock %}
